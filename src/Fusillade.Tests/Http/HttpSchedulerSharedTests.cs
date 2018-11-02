@@ -15,6 +15,7 @@ using Fusillade;
 using Microsoft.Reactive.Testing;
 using Punchclock;
 using ReactiveUI;
+using ReactiveUI.Legacy;
 using ReactiveUI.Testing;
 using Xunit;
 
@@ -96,7 +97,7 @@ namespace Fusillade.Tests
 
                 sched.Start();
 
-                Assert.Equal(5, scheduledCount);
+                Assert.Equal(4, scheduledCount);
                 Assert.Equal(1, completedCount);
 
                 foreach (var v in blockedRqs.Values) {
@@ -105,8 +106,8 @@ namespace Fusillade.Tests
 
                 sched.Start();
 
-                Assert.Equal(5, scheduledCount);
-                Assert.Equal(5, completedCount);
+                Assert.Equal(4, scheduledCount);
+                Assert.Equal(4, completedCount);
             });
         }
 
